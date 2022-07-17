@@ -1,3 +1,23 @@
+const refs = {
+  decrementBTN: document.querySelector("[data-action=decrement]"),
+  incrementBTN: document.querySelector("[data-action=increment]"),
+  value: document.querySelector("#value"),
+};
+
+let count = 0;
+const plus = () => {
+  count += 1;
+  refs.value.textContent = count;
+  console.log(count);
+};
+const minus = () => {
+  count -= 1;
+  refs.value.textContent = count;
+};
+
+refs.decrementBTN.addEventListener("click", minus);
+refs.incrementBTN.addEventListener("click", plus);
+
 // class Counter {
 //   constructor({
 //     incrementBtnSelector,
@@ -39,22 +59,3 @@
 //   decrementBtnSelector: "[data-action=decrement]",
 //   valueContainerSelector: "#value",
 // });
-const refs = {
-  decrementBTN: document.querySelector("[data-action=decrement]"),
-  incrementBTN: document.querySelector("[data-action=increment]"),
-  value: document.querySelector("#value"),
-};
-
-let count = 0;
-const plus = () => {
-  count += 1;
-  refs.value.textContent = count;
-  console.log(count);
-};
-const minus = () => {
-  count -= 1;
-  refs.value.textContent = count;
-};
-
-refs.decrementBTN.addEventListener("click", minus);
-refs.incrementBTN.addEventListener("click", plus);
