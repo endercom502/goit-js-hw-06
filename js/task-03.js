@@ -12,13 +12,10 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-images.forEach(array => {
- const ulId = document.querySelector(".gallery");
-  const arrayLink = `${images.map((item) => `<li><img src=${item.url} alt=${item.alt}/></li>`)}`;
-    let sum = 0;
-    sum += ulId.insertAdjacentHTML("afterbegin", arrayLink);
-      
-});
+const ulId = document.querySelector(".gallery");
+const arrayLink = `${images.map((item) => `<li><img src=${item.url} alt=${item.alt}/></li>`)}`;
+ulId.insertAdjacentHTML("afterbegin", arrayLink);
+
 
 // function insertList(id, array) {
 //   const ulId = document.querySelector(id);
