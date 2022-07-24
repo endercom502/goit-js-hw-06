@@ -12,9 +12,19 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-const ulId = document.querySelector(".gallery");
-const arrayLink = `${images.map((item) => `<li><img src=${item.url} alt=${item.alt}/></li>`)}`;
-ulId.insertAdjacentHTML("afterbegin", arrayLink);
+const gallery = document.querySelector('.gallery');
+
+const createElement = ({ url, alt }) => {
+  return `<img src='${url} alt='${alt} class='image'></img>`;
+};
+
+const element = images.map(createElement).join('');
+gallery.insertAdjacentHTML('beforeend', element);
+
+
+// const ulId = document.querySelector(".gallery");
+// const arrayLink = `${images.map((item) => `<li><img src=${item.url} alt=${item.alt}/></li>`)}`;
+// ulId.insertAdjacentHTML("afterbegin", arrayLink);
 
 
 // function insertList(id, array) {

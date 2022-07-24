@@ -6,16 +6,22 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+const ingredientAllElements = document.querySelector('#ingredients');
 
+for (const ingredient of ingredients) {
+  const ingredientElement = document.createElement('li');
+  ingredientElement.textContent = ingredient;
+  ingredientAllElements.append(ingredientElement);
+}
 
-ingredients.forEach(item => {
-const createLi = document.createElement("li");
-const ulId = document.querySelector("#ingredients");
-const children = ulId.appendChild(createLi);
-let sum = 0;  
-sum += children.textContent = item;
+// ingredients.forEach(item => {
+// const createLi = document.createElement("li");
+// const ulId = document.querySelector("#ingredients");
+// const children = ulId.appendChild(createLi);
+// let sum = [];  
+// sum+= children.textContent = item;
 
-});
+// });
 
 
 // function insertList(id, array) {
